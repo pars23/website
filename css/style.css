@@ -1,0 +1,263 @@
+body {
+    background-image: url(../images/background2.png);
+    background-color: white;
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/UniversalisADFStd-Regular.otf');
+}
+@font-face {
+    font-family: 'Geosans';
+    src: url('../fonts/GeosansLight.ttf');
+}
+@font-face {
+    font-family: 'JennaSue';
+    src: url('../fonts/JennaSue.ttf');
+}
+body, td, th {
+    margin: 0;
+    font-family: 'Futura', serif;
+    color: #4e4641;
+}
+
+.Home ul li {
+    font-family: 'Futura', serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+    position: relative;
+    /*right: 40px;*/
+    width: 100px;
+    line-height: 30px;
+    padding: 10px;
+    height: 100px;
+    overflow: visible;
+
+}
+
+.Home ul{
+    padding-left: 7%;
+}
+
+.menu {
+    background-image: url(../images/bg.png);
+    margin: 0 0 5px 0;
+
+    width: 100%;
+    padding-top: 6px;
+    height: 70px;
+}
+a {font-size: 20px}
+
+a:link {
+    color: #240d0c;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #240d0c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #f3615c;
+}
+
+a:active {
+    text-decoration: none;
+    text-align: right;
+    color: #a8443f;
+
+}
+
+#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff no-repeat center center;
+}
+
+.spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+/* GENERAL */
+
+
+
+@-webkit-keyframes fade {
+
+    from { opacity: 1; }
+
+    to { opacity: 0.2; }
+
+}
+
+@keyframes fade {
+
+    from { opacity: 1; }
+
+    to { opacity: 0.2; }
+
+}
+
+
+
+@-webkit-keyframes rotate {
+
+    from { -webkit-transform: rotate(0deg); }
+
+    to { -webkit-transform: rotate(360deg); }
+
+}
+
+@keyframes rotate {
+
+    from { transform: rotate(0deg); }
+
+    to { transform: rotate(360deg); }
+
+}
+
+/* COLOR SPHERE */
+
+
+
+@-webkit-keyframes sphereSpin {
+
+    0% { -webkit-transform: rotateX(360deg) rotateY(0deg); }
+
+    100% { -webkit-transform: rotateX(0deg) rotateY(360deg); }
+
+}
+
+@keyframes sphereSpin {
+
+    0% { transform: rotateX(360deg) rotateY(0deg); }
+
+    100% { transform: rotateX(0deg) rotateY(360deg); }
+
+}
+
+
+
+.spinner.sphere {
+
+    width: 4em;
+
+    height: 4em;
+
+    -webkit-transform: perspective(20em) rotateX(-24deg) rotateY(20deg) rotateZ(30deg);
+
+    transform: perspective(20em) rotateX(-24deg) rotateY(20deg) rotateZ(30deg);
+
+    -webkit-transform-style: preserve-3d;
+
+    transform-style: preserve-3d;
+
+}
+
+
+
+.spinner .inner {
+
+    width: 100%;
+
+    height: 100%;
+
+    -webkit-transform-style: preserve-3d;
+
+    transform-style: preserve-3d;
+
+    -webkit-animation: sphereSpin 6s linear infinite;
+
+    animation: sphereSpin 6s linear infinite;
+
+}
+
+
+
+.spinner.sphere .disc {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 100%;
+
+    border: 0.3em dotted black;
+
+}
+
+
+
+@-webkit-keyframes rotateDisc2 {
+
+    from { -webkit-transform: rotateX(90deg) rotateZ(0deg); }
+
+    to { -webkit-transform: rotateX(90deg) rotateZ(360deg); }
+
+}
+
+@keyframes rotateDisc2 {
+
+    from { transform: rotateX(90deg) rotateZ(0deg); }
+
+    to { transform: rotateX(90deg) rotateZ(360deg); }
+
+}
+
+
+
+@-webkit-keyframes rotateDisc3 {
+
+    from { -webkit-transform: rotateY(90deg) rotateZ(0deg); }
+
+    to { -webkit-transform: rotateY(90deg) rotateZ(360deg); }
+
+}
+
+@keyframes rotateDisc3 {
+
+    from { transform: rotateY(90deg) rotateZ(0deg); }
+
+    to { transform: rotateY(90deg) rotateZ(360deg); }
+
+}
+
+
+
+.spinner.sphere .disc:nth-child(1) {
+
+    -webkit-animation: rotate 12s linear infinite;
+
+    animation: rotate 12s linear infinite;
+
+}
+
+.spinner.sphere .disc:nth-child(2) {
+
+    -webkit-animation: rotateDisc2 12s linear infinite;
+
+    animation: rotateDisc2 12s linear infinite;
+
+}
+
+.spinner.sphere .disc:nth-child(3) {
+
+    -webkit-animation: rotateDisc3 12s linear infinite;
+
+    animation: rotateDisc3 12s linear infinite;
+
+}
